@@ -25,9 +25,9 @@ namespace DateTimeCalculator
         [TestMethod]
         public void PlusDayTest1()
         {
-            DateTime data = new DateTime(2019, 10, 23);
+            DateTime data = new DateTime(2019, 10, 10);
             var result = DateTimeCalc.PlusDay(data, 10);
-            DateTime data1 = new DateTime(2019, 10, 24);
+            DateTime data1 = new DateTime(2019, 10, 20);
             Assert.AreEqual(data1, result);           
         }
 

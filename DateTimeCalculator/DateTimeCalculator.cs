@@ -17,10 +17,7 @@ namespace DateTimeCalculator
             return a / b;
         }
         public static DateTime PlusDay(DateTime data, int k)
-        {
-
-            new DateTime(data.Year, data.Month, data.Day + k);
-
+        {            
             return new DateTime(data.Year, data.Month, data.Day + k);
         }
         public static DateTime PlusYear(DateTime data, int k)
