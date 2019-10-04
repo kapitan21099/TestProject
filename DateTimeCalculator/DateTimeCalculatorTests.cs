@@ -9,25 +9,13 @@ namespace DateTimeCalculator
 {
     [TestClass]
     public class Tests
-    {
-        [TestMethod]
-        public void DilTest1()
-        {
-            var res = DateTimeCalculator.DateTimeCalc.Dil(10, 5);
-            Assert.AreEqual(2, res);
-        }
-        [TestMethod]
-        public void DilTest2()
-        {
-            var res = DateTimeCalculator.DateTimeCalc.Dil(10, 0);
-            Assert.AreEqual(0, res);
-        }
+    {       
         [TestMethod]
         public void PlusDayTest1()
         {
-            DateTime data = new DateTime(2019, 10, 10);
-            var result = DateTimeCalc.PlusDay(data, 10);
-            DateTime data1 = new DateTime(2019, 10, 20);
+            DateTime data = new DateTime(2019, 1, 1);
+            var result = DateTimeCalc.PlusDay(data, 32);
+            DateTime data1 = new DateTime(2019, 11, 11);
             Assert.AreEqual(data1, result);           
         }
 
