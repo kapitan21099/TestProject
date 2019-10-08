@@ -11,7 +11,7 @@ namespace DateTimeCalculator
         public static DateTime PlusDay(DateTime data, int k)
         {
             int dayInMonth = DateTime.DaysInMonth(data.Year, data.Month);
-            int summDays = data.Day + dayInMonth;//сумма дней в данном месяце
+            int summDays = data.Day + dayInMonth;//сумма дней bv
             int upMonth = data.Month;
             int upYear = data.Year;
             if ((k + data.Day) > dayInMonth)
