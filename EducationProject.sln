@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeCalculator", "DateTimeCalculator\DateTimeCalculator.csproj", "{A5C46CB3-ACD2-4DA6-B9CC-A5B51B640AED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "classes", "classes\classes.csproj", "{F4ADF001-4339-4C59-BECC-94DC45838C62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes", "classes\Classes.csproj", "{F4ADF001-4339-4C59-BECC-94DC45838C62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
