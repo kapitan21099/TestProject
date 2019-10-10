@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace classes
 {
-    class dogtype
+    enum Dogtype
     {
+        Box,
+        HomeDog
     }
 }

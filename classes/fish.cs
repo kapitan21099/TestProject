@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace classes
 {
-    class fish
+    class Fish:Animal
     {
+        public int Deep { get; set; }
     }
 }
