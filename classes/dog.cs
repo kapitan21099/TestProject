@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace classes
 {
-    class Dog:Animal
+    class Dog : Animal
     {
         public Dogtype Dogtype { get; set; }
     }

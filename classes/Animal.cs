@@ -8,5 +8,6 @@ namespace classes
 {
     class Animal
     {
+        public int Wes { get; set; }
     }
 }

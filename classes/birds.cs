@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace classes
 {
-    class Birds:Animal
+    class Birds : Animal
     {
         public int MaxFly { get; set; }
     }
