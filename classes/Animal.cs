@@ -6,8 +6,20 @@ using System.Threading.Tasks;
 
 namespace classes
 {
-    class Animal
+     class Animal
     {
         public int Wes { get; set; }
+
+      /*  public Animal(int wes)
+        {
+            Wes = wes;
+        }*/
+
+        public virtual void  Step()
+        {
+            Console.WriteLine(Wes);
+        }
     }
+
+
 }
