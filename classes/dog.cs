@@ -8,6 +8,18 @@ namespace classes
 {
     class Dog : Animal
     {
+        
         public Dogtype Dogtype { get; set; }
+
+        public Dog(Dogtype dogtype)
+        {
+            Dogtype = dogtype;
+        }
+
+        public override void Step()
+        {
+            Console.WriteLine("Dog is step");
+        }
     }
+   
 }

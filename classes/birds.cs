@@ -9,5 +9,14 @@ namespace classes
     class Birds : Animal
     {
         public int MaxFly { get; set; }
+        public Birds(int maxFly) 
+        {
+            MaxFly = maxFly;
+        }
+
+        public override void Step()
+        {
+            Console.WriteLine(MaxFly);
+        }
     }
 }

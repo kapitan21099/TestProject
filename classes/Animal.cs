@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace classes
 {
-    class Animal
+     abstract class Animal
     {
         public int Wes { get; set; }
+
+     
+        public abstract void Step();
     }
+
+
 }

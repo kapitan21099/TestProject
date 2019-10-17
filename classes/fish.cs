@@ -9,5 +9,9 @@ namespace classes
     class Fish : Animal
     {
         public int Deep { get; set; }
+        public override void Step()
+        {
+            Console.WriteLine("Fish is swim");
+        }
     }
 }
