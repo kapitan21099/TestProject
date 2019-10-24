@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dz20.10", "dz20.10\dz20.10.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skobki_Relize", "Skobki_Relize\Skobki_Relize.csproj", "{B4415440-E456-4DEA-BAEF-3CDFF9E25040}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lessons", "Lessons", "{D1504039-D071-47FC-8C75-0AB36E912316}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{E6029833-3A1C-4FDA-82F6-9AF71A04202D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,9 +43,16 @@ Global
 		{B4415440-E456-4DEA-BAEF-3CDFF9E25040}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4415440-E456-4DEA-BAEF-3CDFF9E25040}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4415440-E456-4DEA-BAEF-3CDFF9E25040}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6029833-3A1C-4FDA-82F6-9AF71A04202D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6029833-3A1C-4FDA-82F6-9AF71A04202D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6029833-3A1C-4FDA-82F6-9AF71A04202D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6029833-3A1C-4FDA-82F6-9AF71A04202D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E6029833-3A1C-4FDA-82F6-9AF71A04202D} = {D1504039-D071-47FC-8C75-0AB36E912316}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6D79D0DC-F63F-47EB-A9E2-D255DDF0F76F}
