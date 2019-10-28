@@ -10,41 +10,51 @@ namespace BoobleMethods
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Vvedite kolichestvo elementov v sluchainom massive");
-            int size = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("\nIshodniy massiv");
+            Console.WriteLine("Enter the number of elements in the array");
+            int size;
+            String x = Console.ReadLine();
+            while (!Int32.TryParse(x, out size))
+            {
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Not a valid number, try again.");
+                Console.ForegroundColor = ConsoleColor.White;
+                x = Console.ReadLine();
+            }            
+            Console.WriteLine("\nSource array");
             int[] array = new int[size];
             Random rand = new Random();
             for (int i = 0; i < array.Length; i++)
             {
                 array[i] = rand.Next(0, 100);
             }
-            for (int i = 0; i < array.Length; i++)
-            {
-                Console.Write(array[i] + " ");
-            }
+            PrintMass(array);
             int f = array.Length - 1;
             int buffer;
-            for (int j = 0; j < array.Length - 1; j++)
+            for (int i = 0; i < array.Length - 1; i++)
             {
-                for (int i = 0; i < f; i++)
+                for (int j = 0; j < f; j++)
                 {
-                    if (array[i] > array[i + 1])
+                    if (array[j] > array[j + 1])
                     {
-                        buffer = array[i + 1];
-                        array[i + 1] = array[i];
-                        array[i] = buffer;
+                        buffer = array[j + 1];
+                        array[j + 1] = array[j];
+                        array[j] = buffer;
                     }
                 }
                 f--;
             }
             Console.WriteLine();
-            Console.WriteLine("\nOtsortirovanniy massiv");
+            Console.WriteLine("\nSorted array");
+            PrintMass(array);          
+            Console.ReadLine();
+        }
+        public static void PrintMass(int[]array)
+        {
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write(array[i] + " ");
             }
-            Console.ReadLine();
         }
     }
 }
