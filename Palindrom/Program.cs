@@ -10,7 +10,7 @@ namespace Palindrom
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello. Enter your word");
+            Console.WriteLine("Hello.Enter your word");
             string word = Console.ReadLine();
             if (IsContainsOnlyLetters(word))
             {
@@ -33,10 +33,10 @@ namespace Palindrom
                     Console.WriteLine("This word is not polindrom");
                 }
             }
-            else if(IsOnlySpaces(word))
+            else if (IsOnlySpaces(word))
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Your word has {0} spaces. Is polindrom",word.Length);
+                Console.WriteLine("Your word has {0} spaces. Is polindrom", word.Length);
             }
             else
             {
@@ -60,8 +60,8 @@ namespace Palindrom
         {
             for (int i = 0; i < word.Length; ++i)
             {
-                char elementOfWord = word[i];              
-                if (elementOfWord!=' ')
+                char elementOfWord = word[i];
+                if (elementOfWord != ' ')
                 {
                     return false;
                 }
