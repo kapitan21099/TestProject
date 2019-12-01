@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temperatura", "ConsoleApp1\Temperatura.csproj", "{19910C10-998C-48AF-B190-211292E1E4BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital", "Hospital\Hospital.csproj", "{E0D518B7-E75F-49E6-A4D1-8D0577056229}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +103,10 @@ Global
 		{19910C10-998C-48AF-B190-211292E1E4BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19910C10-998C-48AF-B190-211292E1E4BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19910C10-998C-48AF-B190-211292E1E4BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0D518B7-E75F-49E6-A4D1-8D0577056229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0D518B7-E75F-49E6-A4D1-8D0577056229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0D518B7-E75F-49E6-A4D1-8D0577056229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0D518B7-E75F-49E6-A4D1-8D0577056229}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
