@@ -10,28 +10,30 @@ namespace Temperatura
     {
         static void Main(string[] args)
         {
-            int n;
-            n = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
             List<int> dic = new List<int>(n);
             List<int> resDic = new List<int>();
-            for(int i=0;i<n;i++)
+            string line = Console.ReadLine();
+            string[] arr1 = line.Split(' ');
+            foreach (var item in arr1)
             {
-                dic.Add(Convert.ToInt32(Console.ReadLine()));
-            }            
-            Console.WriteLine();
-            var _count = 0;
+              dic.Add(Convert.ToInt32(item));
+            }
+            int roundSumm=dic.Sum()/dic.Count;
+
+            var count = 0;
             foreach (var num in dic)
             {
-                if (num > dic.Sum() / n)
+                if (num > roundSumm)
                 {
-                    _count++;
+                    count++;
                     resDic.Add(dic.IndexOf(num));
                 }
             }
-            Console.WriteLine(_count);
+            Console.WriteLine(count);
             foreach (var x in resDic)
             {
-                Console.Write(x+" ");
+                Console.Write(x + " ");
             }
             Console.ReadLine();
         }
