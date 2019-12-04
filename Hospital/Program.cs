@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Hospital
@@ -12,81 +13,70 @@ namespace Hospital
         {
             string input = "COME 7\nWORRY 1\nWORRY 4\nCOME - 2\nWORRY 5\nWORRY_COUNT\nCOME 3\nWORRY 3\nWORRY_COUNT";
             String pattern = @"\n";
-            String[] elements = System.Text.RegularExpressions.Regex.Split(input, pattern);
-            var _worryCount = 0;
-            var _worry = 0;
-            var _come = 0;
-            var _quiet = 0;
-            List<int> list = new List<int>();
+            String[] elements = Regex.Split(input, pattern);
+            var _buffer = 0;
+            List<bool> list = new List<bool>();
             foreach (var element in elements)
             {
                 if (element.StartsWith("WORRY "))
                 {
-                    _worry = Convert.ToInt32(element.Remove(0, 5).Replace(" ", ""));
-                    if (_worry <= _come)
+                    _buffer = Convert.ToInt32(element.Remove(0, 5).Replace(" ", ""));
+                    if (_buffer <= list.Count)
                     {
-                        if (list.Count != 0)
+                        if (list.Count != 0 && list[_buffer - 1] != true)
                         {
-                            foreach (var i in list)
-                            {
-                                if (i == _worry)
-                                {
-                                    Console.WriteLine("This person reapite");
-                                }
-                                else
-                                {
-                                    _worryCount++;
-                                    //  list.Add(_worry);
-                                }
-                            }
+                            list[_buffer - 1] = true;
                         }
                         else
                         {
-                            _worryCount++;
-                            list.Add(_worry);
+                            Console.WriteLine("This person reapite");
                         }
                     }
                     else
                     {
-                        Console.WriteLine("Error");
+                        Console.WriteLine("Error. List is clear");
                     }
                 }
                 else if (element.StartsWith("COME "))
                 {
-                    _come += Convert.ToInt32(element.Remove(0, 4).Replace(" ", ""));
-                }
-                else if (element.StartsWith("WORRY_COUNT"))
-                {
-                    Console.WriteLine(_worryCount);
-                }
-                else if (element.StartsWith("QUIET"))
-                {
-                    _quiet = Convert.ToInt32(element.Remove(0, 5).Replace(" ", ""));
-                    if (list.Count == 0)
+                    _buffer = Convert.ToInt32(element.Remove(0, 4).Replace(" ", ""));
+                    if (_buffer > 0)
                     {
-                        Console.WriteLine("This person do not worry");
+                        for (int i = 0; i < _buffer; i++)
+                        {
+                            list.Add(false);
+                        }
                     }
                     else
                     {
-                        foreach (var i in list)
+                        for (int i = 0; i < Math.Abs(_buffer); i++)
                         {
-                            if (i == _quiet)
-                            {
-                                // list.Remove(_quiet);
-                                _worryCount--;
-                            }
+                            list.RemoveAt(list.Count - 1);
                         }
                     }
-                    //  _worryCount--;
+                }
+                else if (element.StartsWith("WORRY_COUNT"))
+                {
+                    Console.WriteLine(_buffer = list.Count(x => x));
+                }
+                else if (element.StartsWith("QUIET"))
+                {
+                    _buffer = Convert.ToInt32(element.Remove(0, 5).Replace(" ", ""));
+                    if (list[_buffer] == true)
+                    {
+                        list[_buffer] = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("This person do not worry");
+                    }
                 }
             }
             foreach (var item in list)
             {
                 Console.Write(item + "  ");
             }
-            Console.WriteLine($"Worry-{_worryCount} Count in stack-{_come}");
             Console.ReadLine();
-
         }
     }
 }
