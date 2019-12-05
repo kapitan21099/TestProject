@@ -13,9 +13,19 @@
             <ColumnDefinition Width="283*"/>
         </Grid.ColumnDefinitions>
         <Button Content="РЕЗУЛЬТАТ" HorizontalAlignment="Left" Margin="380,229,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" RenderTransformOrigin="8.107,7.8" Grid.ColumnSpan="2"/>
-        <Label x:Name="lable_2" Content="" HorizontalAlignment="Left" Margin="380,140,0,0" VerticalAlignment="Top" Width="132" Height="58" RenderTransformOrigin="0.867,0.129" Background="#FFD46B6B" Grid.ColumnSpan="3"/>
-        <Label x:Name="lable_1" Content="" HorizontalAlignment="Left" Margin="42,46,0,0" VerticalAlignment="Top" Width="168" RenderTransformOrigin="-1.566,-0.365" Background="#FF239B95" BorderBrush="#FFE49797" Height="178"/>
+        <Label x:Name="lable_2" Content=""
+               HorizontalAlignment="Left" Margin="380,140,0,0"
+               VerticalAlignment="Top" Width="132" Height="58"
+               RenderTransformOrigin="0.867,0.129" Background="#FFD46B6B"
+               Grid.ColumnSpan="3"/>
+        <Label x:Name="lable_1" 
+               Content="" HorizontalAlignment="Left" 
+               Margin="42,46,0,0" VerticalAlignment="Top" 
+               Width="168" RenderTransformOrigin="-1.566,-0.365" 
+               Background="#FF239B95" 
+               BorderBrush="#FFE49797" Height="178"/>
         <Button Content="Загрузить исходные данные" HorizontalAlignment="Left" Margin="42,229,0,0" VerticalAlignment="Top" Width="168" Click="Button_Click_1"/>
+        <TextBox x:Name="textbox_1" Grid.Column="2" HorizontalAlignment="Left" Height="173" Margin="107,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157"  AcceptsReturn="True"/>
 
     </Grid>
 </Window>

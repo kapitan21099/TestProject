@@ -94,5 +94,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common_Helpers\Common_Helpers.csproj">
+      <Project>{cb44dfe5-2cda-467f-a973-88d24503a090}</Project>
+      <Name>Common_Helpers</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

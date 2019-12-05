@@ -25,7 +25,7 @@ namespace wpf_for_hospital
         public MainWindow()
         {
             InitializeComponent();
-        }
+        }         
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -77,7 +77,7 @@ namespace wpf_for_hospital
                 }
                 else if (element.StartsWith("WORRYCOUNT"))
                 {
-                    lable_2.Content=$"{lable_2.Content}\n{(_buffer = list.Count(x => x))}";
+                    lable_2.Content=$"{lable_2.Content}\n{list.Count(x => x)}";
                 }
                 else if (element.StartsWith("QUIET"))
                 {

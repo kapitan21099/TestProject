@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Common_Helpers;
+
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
@@ -51,7 +53,7 @@ namespace Hospital
                     {
                         for (int i = 0; i < Math.Abs(_buffer); i++)
                         {
-                            list.RemoveAt(list.Count - 1);
+                            list.RemoveLast();
                         }
                     }
                 }
