@@ -1,0 +1,19 @@
+﻿<Window x:Class="UsersStorage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UsersStorage"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Orientation="Vertical" Height="374">
+        <TextBox Name="TextBoxName" Width="200" Margin="10"/>
+        <TextBox Name="TextBoxPassword" Width="200"  Margin="10"/>
+        <Button Content="Login" Width="62"  Margin="300,10,10,10" Click="ButtonBase_OnClick" RenderTransformOrigin="0.239,0.457" HorizontalAlignment="Left" />
+        <Button x:Name="search" Content="Search" Width="84" VerticalContentAlignment="Stretch" RenderTransformOrigin="0.857,0.509" Click="search_Click"/>
+        <Label x:Name="lableAnswer" Content="" Width="412" Background="#FFEEA7A7" RenderTransformOrigin="0.5,1.471" Height="104" VerticalContentAlignment="Stretch"/>
+        <Button x:Name="count" Content="Count of Data Base" Click="count_Click"/>
+        <Button x:Name="DeleteLastEelement" Content="Delete last element" Click="DeleteLastEelement_Click"/>
+
+    </StackPanel>
+</Window>
