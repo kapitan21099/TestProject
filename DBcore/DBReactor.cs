@@ -52,7 +52,7 @@ namespace DBCore
         {
             SQLiteCommand command = _connection.CreateCommand();
             command.CommandText = "SELECT COUNT (*) FROM Users";
-            string countUser = command.ExecuteScalar().ToString();
+            var countUser = command.ExecuteScalar().ToString();
             return countUser;
         }
         public void DeleteLastElement(string countUser)
