@@ -14,8 +14,7 @@ namespace dz20._10
             Country country2 = new Sity("Russia", 150000);
             Street country3 = new Street("Turkey", 125565, 9985);
             country2.PopCountr(country2.Name,100);
-            country3.
-            Console.Read();
+           // Console.Read();
             
         }
     }
